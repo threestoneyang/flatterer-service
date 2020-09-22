@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.stone</groupId>
+	<artifactId>flatterer-service</artifactId>
+	<version>1.0.0.RELEASE</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.0.RELEASE</version>
+	</parent>
+	<properties>
+		<docker.image.prefix>flatterer-service</docker.image.prefix>
+		<docker.plugin.version>0.4.13</docker.plugin.version>
+		<mapper.version>3.4.0</mapper.version>
+		<maven.compile.source>1.8</maven.compile.source>
+		<maven.compile.target>1.8</maven.compile.target>
+		<boot.admin.version.client>2.0.3</boot.admin.version.client>
+	</properties>
+	<modules>
+		<module>flatterer-center</module>
+		<module>flatterer-common</module>
+		<module>flatterer-manage</module>
+	</modules>
+	<packaging>pom</packaging>
+	<developers>
+		<developer>
+			<name>micro-service</name>
+			<email>741973757@qq.com</email>
+		</developer>
+	</developers>
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.14</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.33</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${boot.admin.version.client}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		<!-- 数据库密码加密依赖 -->
+		<dependency>
+   			<groupId>com.github.ulisesbocchio</groupId>
+   			<artifactId>jasypt-spring-boot-starter</artifactId>
+   			<version>2.1.0</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>oss</id>
+			<name>oss</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</repository>
+
+		<!-- <repository> <id>zte-nexus129</id> <name>zte-nexus129</name> <url>http://gz.iwhalecloud.com:6060/nexus/content/groups/public/</url> 
+			<snapshots> <enabled>true</enabled> </snapshots> <releases> <enabled>true</enabled> 
+			</releases> </repository> -->
+	</repositories>
+	<!--依赖管理，用于管理spring-cloud的依赖，其中Camden.SR3是版本号 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.M8</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+</project>

@@ -1,0 +1,64 @@
+打jar包：
+	mvn clean package -pl p1,p2,p3 -Dmaven.test.skip=true  <-am>
+	
+	mvn clean package  -Dmaven.test.skip=true -am
+	
+	mvn clean package -pl micro-gateway/micro-gateway-v1  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-control/micro-monitor  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-app-push/micro-app-push-consumer,micro-app-push/micro-app-push-service  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-leader-ship-service,micro-modules/micro-task-service,micro-modules/micro-filter-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-manage-myctu-service  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-app-info-service  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-publish-service  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-files-service  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-manage  -Dmaven.test.skip=true  -am
+	mvn clean package -pl micro-modules/micro-info-gather-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-auth/micro-auth-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-center  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-addrList-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-group-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-user-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-app-info-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-qa-question -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-publish-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-user-score-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-expert-columnist-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-wait-info-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-user-task-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-task-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-filter-service  -Dmaven.test.skip=true  -am
+
+	mvn clean package -pl micro-modules/micro-app-knowledgearea-service  -Dmaven.test.skip=true  -am
+
+	mvn clean package -pl micro-modules/micro-leader-ship-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-sys-app-switch-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-sms-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-app-nxkp-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-modules/micro-app-myctu-service -Dmaven.test.skip=true  -am
+api-v2不稳定，先弃用:
+	mvn clean package -pl micro-gateway/micro-gateway-v2  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-auth/micro-login-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-auth/micro-sso-login-service  -Dmaven.test.skip=true  -am
+	
+	mvn clean package -pl micro-auth/micro-auth-service,micro-auth/micro-login-service,micro-auth/micro-sso-login-service  -Dmaven.test.skip=true  -am
